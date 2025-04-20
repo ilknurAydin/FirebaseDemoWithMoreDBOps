@@ -13,7 +13,11 @@ module aydin.firebasedemo {
     requires com.google.api.apicommon;
 
 
-
     opens aydin.firebasedemo to javafx.fxml;
     exports aydin.firebasedemo;
+    exports aydin.firebasedemo.Model;
+    opens aydin.firebasedemo.Model to javafx.fxml;
+    exports aydin.firebasedemo.ViewModel;
+    opens aydin.firebasedemo.ViewModel to javafx.fxml;
+
 }

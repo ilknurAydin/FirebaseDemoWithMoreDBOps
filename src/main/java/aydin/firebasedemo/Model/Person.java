@@ -1,12 +1,20 @@
-package aydin.firebasedemo;
+package aydin.firebasedemo.Model;
 
 public class Person {
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    private String email;
     private String name;
     private int age;
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Person(String email) {
+        this.email = email;
     }
 
     public String getName() {

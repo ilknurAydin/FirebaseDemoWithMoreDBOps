@@ -1,4 +1,4 @@
-package aydin.firebasedemo;
+package aydin.firebasedemo.ViewModel;
 
 import javafx.beans.property.ReadOnlyBooleanProperty;
 import javafx.beans.property.ReadOnlyBooleanWrapper;

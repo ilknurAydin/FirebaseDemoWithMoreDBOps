@@ -1,5 +1,8 @@
 package aydin.firebasedemo;
 
+import aydin.firebasedemo.DemoApp;
+import aydin.firebasedemo.Model.Person;
+import aydin.firebasedemo.ViewModel.AccessDataView;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
@@ -17,7 +20,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -100,8 +102,9 @@ public class PrimaryController {
                     outputTextArea.setText(outputTextArea.getText()+ document.getData().get("Name")+ " , Age: "+
                             document.getData().get("Age")+ " \n ");
                     System.out.println(document.getId() + " => " + document.getData().get("Name"));
-                    person  = new Person(String.valueOf(document.getData().get("Name")),
-                            Integer.parseInt(document.getData().get("Age").toString()));
+                    //person  = new Person(String.valueOf(document.getData().get("Name")),
+                    //        Integer.parseInt(document.getData().get("Age").toString()));
+                    person = new Person("noemail@gmail.com");
                     listOfUsers.add(person);
                 }
             }
